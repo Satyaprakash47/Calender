@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- TITLE, DESC, CHARSET, VIEWPORT -->
+    <title>Calendar</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Offline Javascript Calendar App">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+
+   
+
+    <!-- STYLESHEET + JAVASCRIPT -->
+    <link rel="stylesheet" href="assets/js-calendar.css">
+    <script defer src="assets/js-calendar.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <h1>CALENDAR</h1>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+    <!-- (A) PERIOD SELECTOR -->
+    <div id="calHead">
+      <div id="calPeriod">
+        <select id="calMonth"></select>
+        <input id="calYear" type="number">
+      </div>
+      <input id="calAdd" type="button" class="mi" value="+">
+    </div>
+
+    <!-- (B) CALENDAR WRAPPER -->
+    <div id="calWrap">
+      <div id="calDays"></div>
+      <div id="calBody"></div>
+    </div>
+  </div>
+
+    <!-- (C) EVENT FORM -->
+    <dialog id="calForm"><form method="dialog">
+      <h2 class="evt100">CALENDAR EVENT</h2>
+      <div class="evt50">
+        <label>Start</label>
+        <input id="evtStart" type="datetime-local" required>
+      </div>
+      <div class="evt50">
+        <label>End</label>
+        <input id="evtEnd" type="datetime-local" required>
+      </div>
+      <div class="evt50">
+        <label>Text Color</label>
+        <input id="evtColor" type="color" value="#000000" required>
+      </div>
+      <div class="evt50">
+        <label>Background Color</label>
+        <input id="evtBG" type="color" value="#ffdbdb" required>
+      </div>
+      <div class="evt100">
+        <label>Event</label>
+        <input id="evtTxt" type="text" required>
+      </div>
+      <div class="evt100">
+        <input type="hidden" id="evtID">
+        <input type="button" id="evtCX" class="mi" value="clear">
+        <input type="button" id="evtDel" class="mi" value="delete">
+        <input type="submit" id="evtSave" class="mi" value="save">
+      </div>
+    </form></dialog>
+  </body>
+</html>
